@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-[#edf0f3] lg:px-40">
+    <div className="navbar bg-[#f3f8f3] lg:px-40">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -26,17 +26,17 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link>Home</Link>
+              <Link to="/">Home</Link>
             </li>
 
             <li>
-              <Link>Colleges</Link>
+              <Link to="/college">Colleges</Link>
             </li>
             <li>
-              <Link>Admission</Link>
+              <Link to="/admission">Admission</Link>
             </li>
             <li>
-              <Link>My College</Link>
+              <Link to="/myCollege">My College</Link>
             </li>
           </ul>
         </div>
@@ -45,22 +45,22 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link>Home</Link>
+            <Link to="/">Home</Link>
           </li>
 
           <li>
-            <Link>Colleges</Link>
+            <Link to="/college">Colleges</Link>
           </li>
           <li>
-            <Link>Admission</Link>
+            <Link to="/admission">Admission</Link>
           </li>
           <li>
-            <Link>My College</Link>
+            <Link to="/myCollege">My College</Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn text-white hover:bg-[#2A6F97]	bg-[#2C7DA0]">Button</a>
+        <Link to="/login" className="btn text-white hover:bg-[#2D6A4F]	bg-[#40916C]">Login</Link>
       </div>
     </div>
   );
