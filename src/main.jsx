@@ -12,9 +12,15 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import AuthProvider from './Providers/AuthProvider';
+import Error from './Error/Error';
+import Colleges from './pages/Colleges/Colleges';
 
 
 const router = createBrowserRouter([
+  {
+      path: '*',
+      element: <Error></Error>
+  },
   {
     path: "/",
     element: <Main></Main>,
@@ -23,6 +29,10 @@ const router = createBrowserRouter([
       path: '/',
       element: <Home></Home>
       
+    },
+    {
+      path: 'college',
+      element: <Colleges></Colleges>
     },
     {
       path: 'login',
