@@ -5,7 +5,7 @@ import image from '../../assets/college.avif'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 const Register = () => {
-const {createUser,SignUpLoginWithGoogle,userProfileUpdate} = useContext(AuthContext);
+const {createUser,SignUpLoginWithGoogle,userProfileUpdate,signUpLoginWithGithub} = useContext(AuthContext);
 
 const handleRegister = event =>{
   event.preventDefault();
@@ -39,6 +39,15 @@ const handleRegister = event =>{
       const googleUser = result.user;
       console.log(googleUser);
   
+    })
+    .catch(error => console.error(error))
+  }
+
+  const handleForGithub = () =>{
+    signUpLoginWithGithub()
+    .then(result => {
+      const getGithubUser = result.user;
+      console.log(getGithubUser);
     })
     .catch(error => console.error(error))
   }
@@ -122,7 +131,7 @@ const handleRegister = event =>{
                <FaGoogle></FaGoogle>
                
               </button>
-              <button className="btn btn-circle btn-outline text-xl">
+              <button onClick={handleForGithub} className="btn btn-circle btn-outline text-xl">
                <FaGithub></FaGithub>
                
               </button>
