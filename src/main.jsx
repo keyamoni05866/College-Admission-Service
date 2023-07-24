@@ -17,6 +17,7 @@ import Colleges from './pages/Colleges/Colleges';
 import Details from './pages/Colleges/Details';
 import Admission from './pages/Addmission/Admission';
 import MyCollege from './pages/MyCollege/MyCollege';
+import PrivateRoutes from './Routes/PrivateRoutes';
 
 
 const router = createBrowserRouter([
@@ -40,8 +41,8 @@ const router = createBrowserRouter([
     
     {
         path: 'details/:id',
-        element: <Details></Details>,
-        loader: ({params}) => fetch(`http://localhost:5000/colleges/${params.id}`)
+        element: <PrivateRoutes><Details></Details></PrivateRoutes>,
+        loader: ({params}) => fetch(`https://college-service-server-rho.vercel.app/colleges/${params.id}`)
     },
     {
           path: 'admission',
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
     },
     {
       path: 'myCollege',
-      element: <MyCollege></MyCollege>
+      element: <PrivateRoutes><MyCollege></MyCollege></PrivateRoutes>
     },
     {
       path: 'login',

@@ -30,7 +30,7 @@ const handleSubmit = event=>{
     }
     
     
-    fetch('http://localhost:5000/admission', {
+    fetch('https://college-service-server-rho.vercel.app/admission', {
       method: 'POST',
       headers:{
         'content-type': 'application/json'
@@ -49,7 +49,7 @@ const handleSubmit = event=>{
 
     return (
         <div className=" max-w-5xl mx-auto   rounded-lg pt-3 pb-7">
-      <h2 className="text-2xl text-center mb-5   font-semibold ">
+      <h2 className="text-2xl text-center mb-5  text-[#40916C]  font-semibold ">
       Please Give Us Information
       </h2>
       <form

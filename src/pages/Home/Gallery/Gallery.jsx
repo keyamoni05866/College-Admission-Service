@@ -17,7 +17,7 @@ const Gallery = () => {
         <>
  
         <div className='   mt-8 mb-5'>
-           <h3 className='text-3xl text-center font-semibold mb-8  '>Please visit Our College Graduates Group's Gallery</h3>
+           <h3 className='lg:text-3xl text-center font-semibold mb-8 text-[#40916C]  '>Please visit Our College Graduates Group's Gallery</h3>
         <ResponsiveMasonry
        columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
    >

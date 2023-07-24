@@ -1,12 +1,14 @@
 import { FaGoogle, FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import './Registe.css'
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+
 import image from '../../assets/college.avif'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 const Register = () => {
 const {createUser,SignUpLoginWithGoogle,userProfileUpdate,signUpLoginWithGithub} = useContext(AuthContext);
-
+const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 const handleRegister = event =>{
   event.preventDefault();
   const form = event.target;
@@ -25,6 +27,7 @@ const handleRegister = event =>{
     })
     .then(()=>{})
     .catch(error => console.error(error))
+    navigate(from, { replace: true });
   })
   .catch(error => console.error(error))
 }
