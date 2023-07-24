@@ -15,6 +15,8 @@ import AuthProvider from './Providers/AuthProvider';
 import Error from './Error/Error';
 import Colleges from './pages/Colleges/Colleges';
 import Details from './pages/Colleges/Details';
+import Admission from './pages/Addmission/Admission';
+import MyCollege from './pages/MyCollege/MyCollege';
 
 
 const router = createBrowserRouter([
@@ -35,10 +37,19 @@ const router = createBrowserRouter([
       path: 'college',
       element: <Colleges></Colleges>
     },
+    
     {
         path: 'details/:id',
         element: <Details></Details>,
         loader: ({params}) => fetch(`http://localhost:5000/colleges/${params.id}`)
+    },
+    {
+          path: 'admission',
+          element: <Admission></Admission>
+    },
+    {
+      path: 'myCollege',
+      element: <MyCollege></MyCollege>
     },
     {
       path: 'login',

@@ -38,7 +38,7 @@ const SingleCollege = ({ college }) => {
           <p>Admission Date: {admission_date}</p>
           <div className="card-actions justify-between mt-4">
             <Link to={`/details/${_id}`} className="btn px-12 text-lg text-white hover:bg-[#2D6A4F]	bg-[#40916C]">Details</Link>
-            <button className="btn btn-outline hover:bg-[#2D6A4F]">Admission <FaExternalLinkAlt></FaExternalLinkAlt> </button>
+            <Link to="/admission" className="btn btn-outline hover:bg-[#2D6A4F]">Admission <FaExternalLinkAlt></FaExternalLinkAlt> </Link>
           </div>
         </div>
       </div>

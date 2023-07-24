@@ -1,9 +1,12 @@
+import Cards from "./Cards/Cards";
+import Gallery from "./Gallery/Gallery";
 
 
 const Home = () => {
     return (
-        <div className="lg:px-40">
-            <h2>this is home</h2>
+        <div className="max-w-7xl mx-auto">
+           <Cards></Cards>
+           <Gallery></Gallery>
         </div>
     );
 };

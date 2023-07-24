@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=EB+Garamond&family=Freehand&family=Great+Vibes&family=Lato:ital,wght@0,400;1,700&family=Open+Sans:wght@400;600&family=Poppins:wght@400;500&family=Satisfy&family=Work+Sans&display=swap');
+
+body{
+    font-family:  'Work Sans', sans-serif;;
+}
+
