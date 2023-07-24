@@ -2,10 +2,12 @@ import { Rating } from "@smastrom/react-rating";
 import React from "react";
 import '@smastrom/react-rating/style.css'
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SingleCollege = ({ college }) => {
-  console.log(college);
+
   const {
+    _id,
     college_name,
     college_image,
     college_rating,
@@ -35,7 +37,7 @@ const SingleCollege = ({ college }) => {
           </div>
           <p>Admission Date: {admission_date}</p>
           <div className="card-actions justify-between mt-4">
-            <button className="btn px-12 text-lg text-white hover:bg-[#2D6A4F]	bg-[#40916C]">Details</button>
+            <Link to={`/details/${_id}`} className="btn px-12 text-lg text-white hover:bg-[#2D6A4F]	bg-[#40916C]">Details</Link>
             <button className="btn btn-outline hover:bg-[#2D6A4F]">Admission <FaExternalLinkAlt></FaExternalLinkAlt> </button>
           </div>
         </div>
